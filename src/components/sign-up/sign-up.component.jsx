@@ -6,9 +6,9 @@ import {auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 
 import './sign-up.styles.scss';
 
-class Signup extends React.Component {
-    constructor(props) {
-        super(props);
+class SignUp extends React.Component {
+    constructor() {
+        super();
         this.state = { 
             displayName: '',
             email:'',
@@ -21,7 +21,7 @@ class Signup extends React.Component {
         event.preventDefault();
         const {displayName,email,password,confirmPassword}=this.state;
 
-        if(password!=confirmPassword){
+        if(password!==confirmPassword){
             alert("passwords don't match");
             return;
         }
@@ -100,4 +100,4 @@ class Signup extends React.Component {
     }
 }
  
-export default Signup;
+export default SignUp;
